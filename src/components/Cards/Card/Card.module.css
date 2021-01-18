@@ -1,0 +1,15 @@
+.Card {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #b8a92b;
+  padding: 30px 0;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+.TimeofDay {
+  padding: 20px 0;
+  margin-left: 30px;
+}

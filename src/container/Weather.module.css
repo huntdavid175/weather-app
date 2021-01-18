@@ -1,0 +1,27 @@
+.Weather {
+  padding: 40px 0;
+}
+
+.Weather input {
+  width: 550px;
+  height: 40px;
+  border-radius: 5px;
+  border: 5px solid #fff;
+  font-size: 18px;
+  padding: 14px;
+}
+
+.Weather button {
+  height: 40px;
+  padding: 0 40px;
+  margin-left: 30px;
+  background-color: #b8a92b;
+  border: 1px solid#b8a92b;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+}
