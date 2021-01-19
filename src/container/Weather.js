@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Cards from "../components/Cards/Cards";
 import Hud from "../components/Hud/Hud";
 import Api from "../Api/getWeatherData";
 
 import classes from "./Weather.module.css";
+import Spinner from "../components/UI/Spinner/Spinner";
 
 class Weather extends Component {
   state = {
@@ -17,8 +17,8 @@ class Weather extends Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapShot) {
-    if (prevState != this.state) {
-      if (this.state.searchInput != "" && this.state.doSearch) {
+    if (prevState !== this.state) {
+      if (this.state.searchInput !== "" && this.state.doSearch) {
         console.log(this.state.doSearch);
       }
     }
@@ -55,13 +55,7 @@ class Weather extends Component {
           onChange={this.inputHandler}
         />
         <button onClick={this.submitHandler}>Search</button>
-        {this.state.data ? (
-          <Hud data={this.state.data} />
-        ) : (
-          <h1 style={{ fontSize: "120px", marginTop: "100px", color: "#fff" }}>
-            SEARCH FOR CITY
-          </h1>
-        )}
+        {this.state.data ? <Hud data={this.state.data} /> : <Spinner />}
         {/* <Cards /> */}
       </div>
     );

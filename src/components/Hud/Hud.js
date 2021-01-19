@@ -11,8 +11,7 @@ class Hud extends Component {
   }
 
   render() {
-    const { main, dt, id, name, weather, sys } = this.props.data;
-    const date = new Date("2021-01-19");
+    const { main, dt, name, weather, sys } = this.props.data;
     return (
       <div className={classes.Hud}>
         <div className={classes.ImageContainer}>
