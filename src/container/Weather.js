@@ -19,8 +19,8 @@ class Weather extends Component {
       "http://api.openweathermap.org/data/2.5/forecast",
       "lodz",
       5,
-      "metric",
-      "73222932afd336b167e398441ae72ee0"
+      "73222932afd336b167e398441ae72ee0",
+      "metric"
     );
     const data = await api.getData();
     this.setState({ data: data });

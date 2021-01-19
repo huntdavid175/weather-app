@@ -14,7 +14,7 @@ class Api {
     const data = await axios.get(this.url, {
       params: {
         q: this.location,
-        metric: this.metric,
+        unit: this.unit,
         cnt: this.cnt,
         appid: this.apiKey,
       },
