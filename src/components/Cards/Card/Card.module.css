@@ -3,10 +3,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: #b8a92b;
+  background-color: #e2b82c;
   padding: 30px 0;
   border-radius: 6px;
-  margin: 10px;
+  margin: 5px;
 }
 
 .TimeofDay {
