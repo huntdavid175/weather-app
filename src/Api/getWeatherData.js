@@ -2,10 +2,9 @@ import axios from "./axiosWeather.instance.";
 // import axios from "axios";
 
 class Api {
-  constructor(url, location, cnt, apiKey, unit) {
+  constructor(url, location, apiKey, unit) {
     this.url = url;
     this.location = location;
-    this.cnt = cnt;
     this.apiKey = apiKey;
     this.unit = unit;
   }
@@ -14,12 +13,10 @@ class Api {
     const data = await axios.get(this.url, {
       params: {
         q: this.location,
-        unit: this.unit,
-        cnt: this.cnt,
+        units: this.unit,
         appid: this.apiKey,
       },
     });
-    console.log(data);
     return data;
   }
 }

@@ -2,21 +2,34 @@ import React, { Component } from "react";
 import classes from "./Hud.module.css";
 
 class Hud extends Component {
+  getDate(dt) {
+    const parsedDate = new Date(dt * 1000);
+    const dateArray = parsedDate.toDateString().split(" ");
+    dateArray[0] += ",";
+    dateArray[2] += ",";
+    return dateArray.join(" ");
+  }
+
   render() {
+    const { main, dt, id, name, weather, sys } = this.props.data;
+    const date = new Date("2021-01-19");
     return (
       <div className={classes.Hud}>
         <div className={classes.ImageContainer}>
           <img
-            src="https://img.icons8.com/ios/452/cloud.png"
+            src={`./img/icons/${weather[0].icon}.png`}
             alt="weather-icon"
-            height="150px"
-            width="150px"
+            height="180px"
+            width="180px"
           ></img>
+          <p>{weather[0].description.toUpperCase()}</p>
         </div>
         <div>
-          <h1 className={classes.Temp}>21</h1>
-          <p className={classes.City}>Dusseldorf</p>
-          <p className={classes.Date}>Tuesday 01, Dec, 2015</p>
+          <h1 className={classes.Temp}>{Math.round(main.temp)} &#176;</h1>
+          <p className={classes.City}>
+            {name},{sys.country}
+          </p>
+          <p className={classes.Date}>{this.getDate(dt)}</p>
         </div>
       </div>
     );

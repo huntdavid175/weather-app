@@ -1,5 +1,6 @@
 .Weather {
   padding: 40px 0;
+  font-family: "Yusei Magic", sans-serif;
 }
 
 .Weather input {
@@ -20,6 +21,7 @@
   border-radius: 5px;
   color: #fff;
   font-size: 15px;
+  cursor: pointer;
 }
 
 input:focus {
