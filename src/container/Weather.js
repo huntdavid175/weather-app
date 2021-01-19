@@ -19,7 +19,7 @@ class Weather extends Component {
   componentDidUpdate(prevProps, prevState, snapShot) {
     if (prevState !== this.state) {
       if (this.state.searchInput !== "" && this.state.doSearch) {
-        console.log(this.state.doSearch);
+        this.getData(this.state.searchInput);
       }
     }
   }
@@ -36,7 +36,6 @@ class Weather extends Component {
   };
 
   inputHandler = (event) => {
-    console.log(event.target.value);
     this.setState({ searchInput: event.target.value });
   };
 
